@@ -1,0 +1,41 @@
+---
+import Databiz from '../components/icons/Databiz.astro';
+import Maker from '../components/icons/Maker.astro';
+import Audiophile from '../components/icons/Audiophile.astro';
+import Meet from '../components/icons/Meet.astro';
+
+import { Image } from 'astro:assets';
+// import imageHeroDesk from './public/images/image-hero-desktop.png';
+---
+
+<div class="container mx-auto ">
+
+    <div class="grid grid-cols-2 py-5 mx-20 ">
+        <div class= " ">
+           <h1 class="font-bold text-7xl mt-40"> Make <br> remote work</h1>
+            <h6 class="text-xl mt-20 mb-10"> Get your team in sync, no matter your location.
+                <br> Streamline processes, create team rituals, and <br>
+                 watch productivity soar.</h6>
+                    <div>
+
+                        <button class="bg-black text-white border rounded-xl py-3 px-6">Learn more</button>
+                    </div>
+                    <div class="mt-20 py-5 inline-flex gap-6">
+                       <Databiz/>
+                       <Audiophile/>
+                       <Meet/>
+                       <Maker/>
+                    </div>
+                 
+        </div>
+        <div class=" flex items-center justify-end ">
+          <Image
+  src='/public/images/image-hero-desktop.png'
+  alt="descriptive text"
+  width="480"
+  height="640"
+/>
+        </div>
+    </div>
+
+</div>
