@@ -1,0 +1,45 @@
+---
+import Dropdown from './icons/Dropdown.astro';
+import CompanyDropdown from './CompanyDropdown.astro';
+import FeaturesDropdown from './FeaturesDropdown.astro';
+
+type Props = {
+  text: string;
+  prop: string;
+}
+const { text,prop } = Astro.props
+---
+<script>
+ document.addEventListener('DOMContentLoaded', function () {
+ const btn = document.getElementById('featuresBtn');
+ const btn2 = document.getElementById('companyBtn');
+ const dropdownMenu = document.getElementById('dropdown-menu');
+ const dropdownMenu2 = document.getElementById('dropdown-menu2');
+
+ btn?.addEventListener('click', function(){
+dropdownMenu?.classList.toggle('hidden');
+ })
+ btn2?.addEventListener('click', function(){
+dropdownMenu2?.classList.toggle('hidden');
+ })
+ });
+</script>
+
+<div class="relative">
+  <button id={prop} class="flex items-center py-2 text-medium-gray hover:text-black hover:font-bold ">
+    {text}
+    <Dropdown />
+  </button>
+
+ { text === 'Features' && (
+<div id="dropdown-menu" class="absolute right-2 mt-5 w-38 bg-white items-center hidden shadow-2xl rounded-lg ">
+  <FeaturesDropdown/>
+</div>
+)}
+
+
+{text === 'Company' && (
+<div id="dropdown-menu2" class="absolute left-2 mt-5 w-38 bg-white flex-nowrap items-center hidden shadow-2xl rounded-lg  ">
+     <CompanyDropdown/>
+    </div>)}
+</div>

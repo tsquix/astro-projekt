@@ -1,0 +1,9 @@
+ 
+ ---
+type Props = {
+  text: string;
+  classes:string;
+}
+const { text,classes } = Astro.props
+---
+ <a href="#" class={classes}>{text}</a>

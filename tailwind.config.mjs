@@ -18,9 +18,22 @@ export default {
       fontSize: {
         headingL: ["80px", "80px"],
         BodyS: ["14px", "16px"],
+        BodyM: ["18px", "28px"],
+        headingLMobile: ["36px", "42px"],
+        Medium: ["16px", "26px"],
       },
       boxShadow: {
         custom: "4px 1px 8px rgba(0, 0, 0, 0.1)",
+      },
+      padding: {
+        18: "4.5rem",
+      },
+      letterSpacing: {
+        tightest: "-0.5px",
+      },
+      dropShadow: {
+        "custom-lg":
+          "0 10px 8px rgb(0, 0, 0, 0.4), 0 4px 3px rgb(0, 0, 0, 0.8)", // Custom drop-shadow
       },
     },
   },

@@ -1,0 +1,7 @@
+---
+type Props = {
+  text: string;
+}
+const { text } = Astro.props
+---
+<a href="#" class="hover:text-black hover:font-bold hover:shadow-sm transition-shadow duration-300 hidden lg:inline">{text}</a>

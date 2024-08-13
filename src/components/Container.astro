@@ -5,36 +5,55 @@ import Audiophile from '../components/icons/Audiophile.astro';
 import Meet from '../components/icons/Meet.astro';
 
 import { Image } from 'astro:assets';
-// import imageHeroDesk from './public/images/image-hero-desktop.png';
 ---
 
-<div class="container mx-auto ">
-
-    <div class="grid grid-cols-2 py-5  px-40 ">
-        <div class= " ">
-           <p class="font-bold text-headingL mt-40"> Make <br> remote work</p>
-            <p class="text-lg font-normal text-medium-gray mt-10 "> Get your team in sync, no matter your location.
-                <br> Streamline processes, create team rituals, and <br>
-                 watch productivity soar.</p>
-                    <div class="mt-10">
-                        <button class="bg-black text-white border rounded-2xl py-3 px-8 text-lg font-bold border-black hover:bg-white hover:text-black drop-shadw-md ">Learn more</button>
-                    </div>
-                    <div class="mt-20 py-5 inline-flex gap-10">
-                       <Databiz/>
-                       <Audiophile/>
-                       <Meet/>
-                       <Maker/>
-                    </div>
-                 
-        </div>
-        <div class=" flex items-center justify-end mr-2">
-          <Image
-  src='/public/images/image-hero-desktop.png'
-  alt="descriptive text"
-  width="480"
-  height="640"
-/>
-        </div>
+<div class="container mx-auto">
+  <div class="flex flex-col md:flex-row py-4 px-4 lg:px-18 mx-4 lg:mx-10 min-[320px]:w-full min-[320px]:mx-0 min-[320px]:px-0">
+    <!-- div ze zdjęciem -->
+    <div class="flex-1 order-1 md:order-2 flex items-center justify-center md:justify-end lg:mt-10 md:mt-0 sm:mt-0">
+      <picture>
+        <!-- wersja mobilna -->
+        <source srcset='/public/images/image-hero-mobile.png' media="(max-width: 768px)" class="sm:w-full mx-0" />
+        <!-- wersja desktopowa -->
+        <Image
+          src='/public/images/image-hero-desktop.png'
+          alt="descriptive text"
+          width="480"
+          height="640"
+        />
+      </picture>
     </div>
 
+    <!-- div z tekstem -->
+    <div class="flex-1 order-2 md:order-1 flex flex-col justify-center md:items-start  md:px-8 px-2">
+  <!-- naglowek -->
+ <p class="font-bold lg:text-headingL md:text-6xl  mt-12 md:mt-20 lg:mt-28 text-center md:text-left min-[320px]:text-headingLMobile tracking-tightest ">
+ Make remote work
+</p>
+
+  
+<!-- opis -->
+<p class="min-[320px]:text-Medium xl:text-BodyM xl:text-left lg:text-left lg:text-l px-2 font-normal text-medium-gray mt-6 md:mt-10 min-[320px]:text-center">
+  Get your team in sync, no matter your location.
+  Streamline processes, create team rituals, and 
+  watch productivity soar.
+</p>
+
+  
+  <!-- button learn more -->
+<div class="mt-10 md:mt-14 text-center md:text-left px-2">
+  <button class="bg-black text-white border rounded-2xl py-3 px-8 min-[320px]:px-6 text-lg font-bold border-black hover:bg-white hover:text-black hover:drop-shadow-lg transition-shadow duration-300 drop-shadow-xl">
+    <h1 class="drop-shadow-custom-lg font-bold">Learn more</h1>
+  </button>
+</div>
+
+
+  
+  <!-- loga TODO logo  no wrap  --> 
+<div class="mt-10 md:mt-20 py-5 flex flex-wrap justify-center md:justify-start gap-6">
+    <Databiz />
+    <Audiophile />
+    <Meet />
+    <Maker />
+</div>
 </div>

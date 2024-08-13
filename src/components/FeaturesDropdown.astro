@@ -1,37 +1,4 @@
----
-import Dropdown from '../components/icons/Dropdown.astro';
-
-type Props = {
-  text: string;
-  prop: string;
-}
-const { text,prop } = Astro.props
----
-<script>
- document.addEventListener('DOMContentLoaded', function () {
- const btn = document.getElementById('featuresBtn');
- const btn2 = document.getElementById('companyBtn');
- const dropdownMenu = document.getElementById('dropdown-menu');
- const dropdownMenu2 = document.getElementById('dropdown-menu2');
-
- btn?.addEventListener('click', function(){
-dropdownMenu?.classList.toggle('hidden');
- })
- btn2?.addEventListener('click', function(){
-dropdownMenu2?.classList.toggle('hidden');
- })
- });
-</script>
-
-<div class="relative">
-  <button id={prop} class="flex items-center">
-    {text}
-    <Dropdown />
-  </button>
-
- { text === 'Features' && (
-<div id="dropdown-menu" class="absolute right-2 mt-5 w-38 bg-white items-center hidden">
-  <a href="#" class="flex items-center justify-start px-4 py-2 text-medium-gray hover:bg-gray-100 text-left min-w-full">
+ <a href="#" class="flex items-center justify-start px-4 py-2 text-medium-gray hover:bg-gray-100 text-left min-w-full">
     <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" class="mr-2"><path d="M14 3v12a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h1V1a1 1 0 1 1 2 0v1h2V1a1 1 0 1 1 2 0v1h2V1a1 1 0 0 1 2 0v1h1a1 1 0 0 1 1 1Zm-2 3H2v1h10V6Zm0 3H2v1h10V9Zm0 3H2v1h10v-1Z" fill="#726CEE"/></svg>
     Todo List
   </a>
@@ -51,23 +18,3 @@ dropdownMenu2?.classList.toggle('hidden');
     </svg>
     Planning
   </a>
-</div>
-)}
-
-
-{text === 'Company' && (
-<div id="dropdown-menu2" class="absolute left-2 mt-5 w-38 bg-white flex-nowrap items-center hidden">
-      <a href="#" class="flex items-center justify-start px-4 py-2 text-medium-gray hover:bg-gray-100">
-       
-        History
-      </a>
-      <a href="#" class="flex items-center justify-start px-4 py-2 whitespace-nowrap  text-medium-gray hover:bg-gray-100">
-       
-        Our team
-      </a>
-      <a href="#" class="flex items-center justify-start px-4 py-2 text-medium-gray hover:bg-gray-100">
-       
-        Blog
-      </a>
-    </div>)}
-</div>
