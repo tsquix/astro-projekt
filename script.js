@@ -45,4 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
   companyBtnMobile.addEventListener("click", function () {
     dropdownMenu2Mobile.classList.toggle("hidden");
   });
+  const btn = document.getElementById("featuresBtn");
+  const btn2 = document.getElementById("companyBtn");
+  const dropdownMenu = document.getElementById("dropdown-menu");
+  const dropdownMenu2 = document.getElementById("dropdown-menu2");
+
+  btn.addEventListener("click", function () {
+    dropdownMenu.classList.toggle("hidden");
+  });
+  btn2.addEventListener("click", function () {
+    dropdownMenu2.classList.toggle("hidden");
+  });
 });
