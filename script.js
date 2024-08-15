@@ -1,8 +1,18 @@
 "use strict";
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.from("body", { duration: 1, opacity: 0, y: 20 });
-});
+
 document.addEventListener("DOMContentLoaded", function () {
+  gsap.from("body", { duration: 1, opacity: 0, y: 20 });
+  const btn = document.getElementById("featuresBtn");
+  const btn2 = document.getElementById("companyBtn");
+  const dropdownMenu = document.getElementById("dropdown-menu");
+  const dropdownMenu2 = document.getElementById("dropdown-menu2");
+
+  btn?.addEventListener("click", function () {
+    dropdownMenu?.classList.toggle("hidden");
+  });
+  btn2?.addEventListener("click", function () {
+    dropdownMenu2?.classList.toggle("hidden");
+  });
   const hamburgerMenu = document.getElementById("hamburgerMenu");
   const mobileMenu = document.getElementById("mobileMenu");
   const mask = document.getElementById("mask");
