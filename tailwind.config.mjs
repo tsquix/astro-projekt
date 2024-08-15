@@ -35,6 +35,9 @@ export default {
         "custom-lg":
           "0 10px 8px rgb(0, 0, 0, 0.4), 0 4px 3px rgb(0, 0, 0, 0.8)", // Custom drop-shadow
       },
+      scale: {
+        60: "0.6",
+      },
     },
   },
   plugins: [],

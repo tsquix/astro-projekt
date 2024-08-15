@@ -13,16 +13,16 @@ import { Image } from 'astro:assets';
   <div class="flex flex-col md:flex-row py-4 px-4 lg:px-18 mx-4 lg:mx-10 min-[320px]:w-full min-[320px]:mx-0 min-[320px]:px-0">
     <!-- div ze zdjęciem -->
     <div class="flex-1 order-1 md:order-2 flex items-center justify-center md:justify-end lg:mt-10 md:mt-0 sm:mt-0">
-      <picture>
-        <!-- wersja mobilna -->
-        <source srcset='/public/images/image-hero-mobile.png' media="(max-width: 768px)" class="sm:w-full mx-0" />
-        <!-- wersja desktopowa -->
-        <Image alt="glowne zdjecie"
-          src='/public/images/image-hero-desktop.png'
-          width="480"
-          height="640"
-        />
-      </picture>
+     <picture>
+    <!-- Mobile version -->
+    <source srcset='/astro-projekt/images/image-hero-mobile.png' media="(max-width: 768px)" class="sm:w-full mx-0" />
+    <!-- Desktop version -->
+    <img alt="main image"
+      src='/astro-projekt/images/image-hero-desktop.png'
+      width="480"
+      height="640"
+    />
+  </picture>
     </div>
 
     <!-- div z tekstem -->
@@ -50,8 +50,8 @@ import { Image } from 'astro:assets';
 
 
   
-  <!-- loga TODO logo  no wrap  --> 
-<div class="mt-10 md:mt-20 py-5 flex no-wrap justify-center md:justify-start gap-0 md:gap-2 sm:gap-4 lg:gap-4  xl:gap-6">
+  <!-- loga   --> 
+<div class="mt-10 md:mt-20 py-5 flex no-wrap justify-center md:justify-start min-[320px]:gap-0 md:gap-2 sm:gap-4 lg:gap-4  xl:gap-6">
 
   
     <Databiz />
