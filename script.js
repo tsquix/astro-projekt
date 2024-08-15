@@ -1,7 +1,6 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  gsap.from("body", { duration: 1, opacity: 0, y: 20 });
   const btn = document.getElementById("featuresBtn");
   const btn2 = document.getElementById("companyBtn");
   const dropdownMenu = document.getElementById("dropdown-menu");
@@ -13,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
   btn2?.addEventListener("click", function () {
     dropdownMenu2?.classList.toggle("hidden");
   });
+});
+document.addEventListener("DOMContentLoaded", function () {
   const hamburgerMenu = document.getElementById("hamburgerMenu");
   const mobileMenu = document.getElementById("mobileMenu");
   const mask = document.getElementById("mask");
