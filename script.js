@@ -1,19 +1,6 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("featuresBtn");
-  const btn2 = document.getElementById("companyBtn");
-  const dropdownMenu = document.getElementById("dropdown-menu");
-  const dropdownMenu2 = document.getElementById("dropdown-menu2");
-
-  btn?.addEventListener("click", function () {
-    dropdownMenu?.classList.toggle("hidden");
-  });
-  btn2?.addEventListener("click", function () {
-    dropdownMenu2?.classList.toggle("hidden");
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
   const hamburgerMenu = document.getElementById("hamburgerMenu");
   const mobileMenu = document.getElementById("mobileMenu");
   const mask = document.getElementById("mask");
