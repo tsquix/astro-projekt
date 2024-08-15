@@ -1,5 +1,4 @@
 "use strict";
-
 document.addEventListener("DOMContentLoaded", function () {
   const hamburgerMenu = document.getElementById("hamburgerMenu");
   const mobileMenu = document.getElementById("mobileMenu");
